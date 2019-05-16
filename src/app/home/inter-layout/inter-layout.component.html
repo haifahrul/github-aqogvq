@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" role="heading" class="app-toolbar"   >
+<mat-toolbar-row class="mat-elevation-z6" >
+  <mat-icon>book</mat-icon>
+  <span>Diary</span>
+  <span class="fill-space"></span>
+    <button (click)="logout()" mat-icon-button color="accent" >
+    <mat-icon >exit_to_app</mat-icon>
+  </button>
+</mat-toolbar-row>
+  <mat-toolbar-row class="mat-elevation-z2" >
+      <button mat-button routerLink="/about" >about</button>
+      <button mat-button routerLink="/event">Events</button>
+      <button mat-button routerLink="/settings">settings</button>
+      <button mat-button new-tab-opt><new-tab-opt link="/settings">settings</new-tab-opt></button>
+  </mat-toolbar-row>
+</mat-toolbar> 
+<div class="container my-3"><router-outlet></router-outlet></div>
+

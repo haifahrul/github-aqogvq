@@ -1,0 +1,19 @@
+    
+<button  mat-raised-button color="accent" routerLink="/event/create"> <mat-icon>add</mat-icon> Add Event</button>
+<button  mat-raised-button color="warn" class="ml-2" (click)="deleteAll()"> <mat-icon>delete</mat-icon> Delete All</button>
+
+
+<mat-card class="mat-elevation-z3 my-3" *ngFor="let article of articles"  >
+  <mat-card-header>
+    <mat-card-title [innerHTML]="article.title?article.title:'untitled Event'"></mat-card-title>
+    <mat-card-subtitle>{{article.createdOn}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content [innerHTML]="article.shortContent?article.shortContent:'' + '.....'">
+    
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-stroked-button  [routerLink]="[article.id]"><mat-icon>open_in_new</mat-icon> Open</button>
+    <button mat-stroked-button class="ml-2" [routerLink]="['edit',article.id]"> <mat-icon>create</mat-icon> Edit</button>
+    <button mat-stroked-button class="ml-2" (click)="delete(article.id)" > <mat-icon color="warn">delete</mat-icon> Delete</button>
+  </mat-card-actions>
+</mat-card>

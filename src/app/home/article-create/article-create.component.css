@@ -1,0 +1,11 @@
+ div, h2 
+{outline: none} 
+
+[placeholder]:empty::before {
+    content: attr(placeholder);
+    color: #999; 
+}
+
+[placeholder]:empty:focus::before {
+    content: "";
+}

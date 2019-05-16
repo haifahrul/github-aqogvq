@@ -1,0 +1,15 @@
+<mat-card  class="col-md-4 col-sm-7 mx-auto mat-elevation-z6 my-4">
+  <mat-card-title>Login</mat-card-title>
+<form [formGroup]="loginForm" (ngSubmit)="login()" >
+  <mat-form-field class="full-width">
+    <input matInput type="text"  placeholder="Email" autocomplete formControlName="email" >
+  </mat-form-field>
+  <mat-form-field class="full-width" >
+    <input matInput type="password" placeholder="Password" autocomplete formControlName="password" >
+  </mat-form-field>
+  <mat-card-actions>
+    <button type="submit" mat-raised-button color="primary">Login</button>
+  </mat-card-actions>
+  
+</form>
+</mat-card> 

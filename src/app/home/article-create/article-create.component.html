@@ -1,0 +1,30 @@
+<h2
+[attr.contenteditable]="edit"
+  [innerHTML]="article.title"
+  #title1
+  (keyup)="edit&&onTitleChange(title1)"
+  (paste)="edit&&onTitleChange(title1)"
+  (cut)="edit&&onTitleChange(title1)"
+  (copy)="edit&&onTitleChange(title1)"
+  (delete)="edit&&onTitleChange(title1)"
+  (mouseup)="edit&&onTitleChange(title1)"
+  (blur)="edit&&onTitleChange(title1)"
+  
+  [attr.placeholder]="edit?'Title (start typing your title over here)':'unitled Event'"
+>
+  Title
+</h2>
+<div [attr.contenteditable]="edit"
+[innerHTML]="article.content"
+  #content1 id="content1"
+  (keyup)="edit&&onContentChange(content1)"
+  (paste)="edit&&onContentChange(content1)"
+  (cut)="edit&&onContentChange(content1)"
+  (copy)="edit&&onContentChange(content1)"
+  (delete)="edit&&onContentChange(content1)"
+  (mouseup)="edit&&onContentChange(content1)"
+  (blur)="edit&&onContentChange(content1)"
+  [attr.placeholder]="edit?'Content (start typing your content over here)':''"
+>
+This is content
+</div>
